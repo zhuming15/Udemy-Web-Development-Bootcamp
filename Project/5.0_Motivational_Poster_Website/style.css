@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+}
+
+.poster {
+    width: 100%;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    margin: 50px 25% 0px 25%;
+}
+
+.text {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.image {
+    border: 5px solid white;
+    width: 100%;
+}
