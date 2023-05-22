@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mondrian Composition</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 600px;
+            height: 600px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .block {
+            box-sizing: border-box;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .red {
+            background-color: #ff4d4d;
+        }
+
+        .blue {
+            background-color: #0080ff;
+        }
+
+        .yellow {
+            background-color: #ffcc00;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .block:before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 50%;
+            height: 50%;
+            border: 2px solid black;
+            z-index: 1;
+        }
+
+        .block:after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            right: -1px;
+            width: 50%;
+            height: 50%;
+            border: 2px solid black;
+            z-index: 1;
+        }
+
+        .block:nth-child(4n+1):before,
+        .block:nth-child(4n+2):before,
+        .block:nth-child(4n+3):after,
+        .block:nth-child(4n+4):after {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="block red" style="width: 350px; height: 300px;"></div>
+        <div class="block white" style="width: 250px; height: 200px;"></div>
+        <div class="block blue" style="width: 350px; height: 200px;"></div>
+        <div class="block yellow" style="width: 200px; height: 400px;"></div>
+        <div class="block white" style="width: 200px; height: 100px;"></div>
+        <div class="block red" style="width: 150px; height: 200px;"></div>
+        <div class="block blue" style="width: 200px; height: 100px;"></div>
+        <div class="block white" style="width: 200px; height: 300px;"></div>
+        <div class="block yellow" style="width: 200px; height: 200px;"></div>
+        <div class="block white" style="width: 250px; height: 100px;"></div>
+        <div class="block red" style="width: 150px; height: 100px;"></div>
+        <div class="block blue" style="width: 200px; height: 200px;"></div>
+        <div class="block yellow" style="width: 150px; height: 150px;"></div>
+        <div class="block white" style="width: 100px; height: 200px;"></div>
+        <div class="block red" style="width: 100px; height: 100px;"></div>
+        <div class="block blue" style="width: 100px; height: 150px;"></div>
+    </div>
+</body>
+
+</html>

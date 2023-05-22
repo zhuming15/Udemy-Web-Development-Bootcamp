@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      gap: 100px;
+    }
+
+    .container {
+      background-color: black;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8 1fr);
+      height: 500px;
+      width: 500px;
+      gap: 10px;
+      border-radius: 16px;
+      /* 15px */
+      /* box-shadow: black 0px 0px 0px 10px; */
+    }
+
+    .header {
+      font-family: 'Lora', serif;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .red {
+      background-color: #E72F24;
+      grid-area: 2 / 2/ 4 / 4;
+    }
+
+    .black {
+      background-color: #232629;
+    }
+
+    .white {
+      background-color: #F0F1EC;
+    }
+
+    .yellow {
+      background-color: #F9D01E;
+    }
+
+    .blue {
+      background-color: #004592;
+    }
+
+    .w1 {
+      grid-area: 1 / 4 / 1 / 7;
+    }
+
+    .y4 {
+      grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .w3 {
+      grid-area: 4 / 1 / 6 / 2;
+    }
+
+    .w4 {
+      grid-area: 2 / 5 / 4 / 8
+    }
+
+    .w5 {
+      grid-area: 2 / 8 / 8 / 9;
+    }
+
+    .w6 {
+      grid-area: 8 / 2 / 9 /8;
+    }
+
+    .w7 {
+      grid-area: 8 / 8 / 9 / 9;
+      border-radius: 0px 0px 15px 0px;
+    }
+
+    .r1 {
+      grid-area: 2 / 2 / 4 / 4;
+    }
+
+    .r2 {
+      grid-area: 4 / 4 / 8 / 8;
+    }
+
+    .y1 {
+      grid-area: 1 / 2 / 1 /4
+    }
+
+    .y2 {
+      grid-area: 4 / 2 / 8 / 4;
+    }
+
+    .r3 {
+      grid-area: 1 / 1 / 2 / 2;
+      border-radius: 15px 0px 0px 0px;
+    }
+
+    .y3 {
+      grid-area: 2 / 4 / 4 / 5;
+    }
+
+    .b1 {
+      grid-area: 1 / 7 / 2 / 9;
+      border-radius: 0px 15px 0px 0px;
+    }
+
+    .b2 {
+      grid-area: 6 / 1 / 9 / 2;
+      border-radius: 0px 0px 0px 15px;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:wght@300&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Zhu Ming's Mondrian Project</h1>
+  </header>
+  <!-- Write your HTML here -->
+  <div class="container">
+    <div class="container__box red r1"></div>
+    <div class="container__box red r3"></div>
+    <div class="container__box yellow y3"></div>
+    <div class="container__box blue b1"></div>
+    <div class="container__box blue b2"></div>
+    <div class="container__box yellow y1"></div>
+    <div class="container__box yellow y2"></div>
+    <div class="container__box white w1"></div>
+    <div class="container__box yellow y4"></div>
+    <div class="container__box white w3"></div>
+    <div class="container__box red r2"></div>
+    <div class="container__box white w4"></div>
+    <div class="container__box white w5"></div>
+    <div class="container__box white w6"></div>
+    <div class="container__box white w7"></div>
+  </div>
+</body>
+
+</html>
