@@ -9,6 +9,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+  console.log(req.body);
+  console.log(req.body.num1);
   var num1 = Number(req.body.num1);
   var num2 = Number(req.body.num2);
   var result = num1 + num2;
